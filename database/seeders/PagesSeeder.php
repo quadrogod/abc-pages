@@ -1,6 +1,6 @@
 <?php
 
-namespace Quadrogod\Abc\Core\Database\Seeders;
+namespace Quadrogod\Abc\Pages\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Quadrogod\Abc\Pages\Models\Page;
@@ -16,7 +16,7 @@ class PagesSeeder extends Seeder
     public function run()
     {
         //@todo: сделать создание через модель, и туда вшить поддержку дерева
-        DB::table('pages')->insert([
+        Page::create([
             'name' => 'Index Page',
             'title' => 'Index Page',
             'url' => 'index',
@@ -30,10 +30,10 @@ class PagesSeeder extends Seeder
             'level' => 1,
         ]);
 
-        DB::table('pages')->insert([
+        Page::create([
             'name' => 'Text Page',
             'title' => 'Text Page',
-            'url' => 'text',
+            'url' => 'pages',
             'route_name' => 'pages.text',
             'module' => 'Quadrogod\\Abc\\Pages\\PageModule',
             'display' => true,

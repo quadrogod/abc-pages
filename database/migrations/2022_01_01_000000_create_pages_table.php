@@ -18,7 +18,7 @@ class CreatePagesTable extends Migration
             $table->timestamps();
             // Basic Fields
             $table->string('name', 255)->default('');
-            $table->string('url', 255)->default('');
+            $table->string('url', 255)->default(null)->nullable()->unique();
             $table->string('route_name', 255)->default(null)->nullable()->unique();
             $table->string('module', 255)->nullable()->default(null);
             $table->boolean('display')->default(false);
