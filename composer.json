@@ -1,0 +1,29 @@
+{
+  "name": "quadrogod/abc-pages",
+  "description": "Abc Pages",
+  "minimum-stability": "stable",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "quadrogod",
+      "email": "quadrogod@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Quadrogod\\Abc\\Pages\\": "src/",
+      "Quadrogod\\Abc\\Pages\\Database\\Seeders\\": "database/seeders/"
+    }
+  },
+  "require": {
+    "quadrogod/abc-core": "*"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Quadrogod\\Abc\\Pages\\ServiceProvider"
+      ]
+    }
+  }
+}
